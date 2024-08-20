@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="reloj">
+  <ClassDiagramComponents>
+    <Class name="Reloj" package="" visibility="public" xPosition="147.0" yPosition="52.0">
+      <Fields>
+        <Field name="dia" type="String" visibility="private"/>
+        <Field name="hora" type="String" visibility="private"/>
+        <Field name="modelo" type="String" visibility="private"/>
+        <Field name="numSerie" type="long" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDia" returnType="void" visibility="public"/>
+        <Method name="getHora" returnType="void" visibility="public"/>
+        <Method name="incrementarDia" returnType="void" visibility="public"/>
+        <Method name="incrementarHora" returnType="void" visibility="public"/>
+        <Method name="limpiarPantalla" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RelojFit" package="" visibility="public" xPosition="245.0" yPosition="444.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="cuentaPasos" returnType="void" visibility="public">
+          <Argument type="int" name="x"/>
+        </Method>
+        <Method name="frecuenciaAleatoria" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="666.0" yPosition="42.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="reloj" type="Reloj" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="void" visibility="public"/>
+        <Method name="getEdad" returnType="void" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public"/>
+        <Method name="decirHora" returnType="void" visibility="public"/>
+        <Method name="hablar" returnType="void" visibility="public"/>
+        <Method name="comer" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="RelojFit" target="Reloj"/>
+    <HasRelation name="tiene" source="Persona" target="Reloj" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
